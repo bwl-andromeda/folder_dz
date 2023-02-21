@@ -13,7 +13,7 @@ class Student:
         for keys, values in self.grades.items():
             for i in values:
                 a.append(i) 
-        return sum(a) / len(a)
+        return round(sum(a) / len(a),2)
         
     def __str__(self):
         res = f'Имя: {self.name}\nФамилия: {self.surname}\nСредняя оценка за домашние задания: {self.get_awg_hw(self.grades)}\nКурсы в процессе изучения: {", " .join(self.courses_in_progress)}\nЗавершенные курсы: {", " .join(self.finished_courses)}'
@@ -54,7 +54,7 @@ class Lecturer(Mentor):
         for keys, values in self.grades.items():
             for i in values:
                 a.append(i) 
-        return sum(a) / len(a)
+        return round((sum(a) / len(a)),2)
 
         
     def __str__(self):
